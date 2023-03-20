@@ -1,3 +1,4 @@
+// promise는 오래 걸리는 걸 했을때 끝나면 가져오는 함수 
 
 // 성공적으로 끝나면 resolve, 아니면 reject 호출
 function callback(resolve, reject) {

@@ -1,8 +1,8 @@
-//promise.js in lamda function version
+//promise.js in lamda function version using chain 
 
 //new promise로 promise 넣음
 const promise = new Promise((resolve, reject) => {
-    let success = false;
+    let success = true;
     if (success) {
         resolve("성공했음");
     }
@@ -10,7 +10,15 @@ const promise = new Promise((resolve, reject) => {
         reject("실패했음");
     }
 }).then((message) => {
-        console.log(message);})
+        console.log(message);
+        return new Promise((resolve,reject) => {
+            resolve('두번째 체인');
+        })
+    })
+    .then((message) => {
+        console.log('2',message);
+
+    })
     .catch((message) => {
         console.log(message);})
     .finally((message) => {
