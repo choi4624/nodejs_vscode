@@ -19,11 +19,14 @@ function thencallback(message){
 function catchcallback(message){
     console.log(message);
 }
+function finallycallback(message){
+    console.log("무조건 실행");
+}
 
 //성공한 경우 resolve 케이스의 경우 then을 내보냄
 //실패한 경우 reject 케이스의 경우 catch를 내보냄
 // finally 로 무조건 실행됨 
-promise.then(thencallback).catch(catchcallback);
+promise.then(thencallback).catch(catchcallback).finally(finallycallback);
 
 
 
