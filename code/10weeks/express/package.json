@@ -10,5 +10,8 @@
     "choi4624"
   ],
   "author": "choi4624",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
