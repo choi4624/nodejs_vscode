@@ -1,0 +1,14 @@
+{
+  "name": "i4express",
+  "version": "1.0.0",
+  "description": "base express package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "choi4624"
+  ],
+  "author": "choi4624",
+  "license": "ISC"
+}
