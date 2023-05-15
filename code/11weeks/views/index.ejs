@@ -1,0 +1,10 @@
+<h1> html code </h1>
+
+<%= text %>
+<%var count = 0 %>
+<% for (let i = 0; i <5; i++) { %>
+    <% count++; %>
+<% } %>
+
+<h2> count: <%= count %> </h2>
+<%- include('array.ejs', {title: '문서제목', count: 1, array}); %> 
