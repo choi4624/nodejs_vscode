@@ -5,9 +5,11 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
+    <!-- 헤드는 html에서 고쳐야 함 -->
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div id="app"></div> <!-- 이 div 안에 있는 것들만 바뀜, HTML은 건들일이 거의 없음 -->
+    <script type="module" src="/main.js"></script>
+    <!-- src 내에 있는 경로를 그냥 프로젝트 루트 경로를 사용하도록 변경 -->
   </body>
 </html>
