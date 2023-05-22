@@ -10,7 +10,7 @@ const state = reactive({ count: 9 });
 
 const msg = ref('goodbye declare');
 const count = ref(0); // object, string, number 
-count.value = 20; // count 의 값만 바꾼다는 의미 
+count.value = 0; // count 의 값만 바꾼다는 의미 
 msg.value = 'hello declare';
 
 // 적은 양의 코드로도 쉽게 바꿀 수 있음 
@@ -41,6 +41,22 @@ function binding(e)
 }
 
 const text2 = ref('abcdafds');
+
+    let id = 0;
+        //for   
+    const todos = ref([
+        {id: id++, text:'text1'},
+        {id: id++, text:'text2'},
+        {id: id++, text:'text3'}
+    ])
+
+    // push 
+    function f() {
+
+        let newtodo = todos.value.push();
+        newtodo.value.text = "pushed";
+    }
+
 
 </script>
 
@@ -75,5 +91,16 @@ const text2 = ref('abcdafds');
         <h2>{{ text2 }}</h2>
     </div>
 
-    
+    <!-- conditional binding -->
+    <h1 v-if="count"> Hello </h1>
+    <h1 v-else>false</h1>
+
+
+    <ul>
+        <li v-for="todo in todos" :key="todo.id">
+        {{ todo.text }}
+        </li>
+    </ul>
+    <button @click="f">클릭 버튼</button>
+
 </template>
