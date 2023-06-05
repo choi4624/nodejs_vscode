@@ -4,7 +4,7 @@
 
 // const msg = ref('Hello World!')
 
-import { reactive, ref } from "vue";
+import { onMounted, reactive, ref } from "vue";
 
 const state = reactive({ count: 9 });
 
